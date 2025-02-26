@@ -7,12 +7,12 @@ if (process.argv.length < 3) {
     process.exit(1);
 }
 
-const targetDate = process.argv[2];
+const targetDate = process.argv[2]; // Date to filter logs by
 const logFilePath = path.join(__dirname, "logs_2024.log"); // Log file inside src
-const outputDir = path.join(__dirname, "..", "output"); // Move one level up to 'output' folder
+const outputDir = path.join(__dirname, "..", "output"); 
 const outputFilePath = path.join(outputDir, `output_${targetDate}.txt`);
 
-// Ensure the output directory exists
+
 if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true });
 }
